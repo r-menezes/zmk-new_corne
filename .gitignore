@@ -3,3 +3,5 @@ zmk/
 modules/
 tools/
 .west/
+firmware.zip
+*.uf2
