@@ -95,10 +95,10 @@ ZMK_HOLD_TAP(hmr,
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB               &kp Q  &kp W  &kp E   &kp R           &kp T                                 &kp UP                &kp Y           &kp U         &kp I      &kp O    &kp P          &kp BSPC
-&td0                  &kp A  &kp S  &kp D   &kp F           &kp G                       &kp LEFT  &kp ENTER  &kp RIGHT  &kp H           &kp J         &kp K      &kp L    &kp SEMICOLON  &kp SQT
+&kp TAB               &kp Q  &kp W  &kp E   &kp R           &kp T                                 &kp UP                &kp Y           &kp U         &kp I      &kp O    &kp P          &kp LBKT
+&kp BSPC              &kp A  &kp S  &kp D   &kp F           &kp G                       &kp LEFT  &kp ENTER  &kp RIGHT  &kp H           &kp J         &kp K      &kp L    &kp SEMICOLON  &kp SQT
 &kp NON_US_BACKSLASH  &kp Z  &kp X  &kp C   &kp V           &kp B          &kp SPACE              &kp DOWN              &kp N           &kp M         &kp COMMA  &kp DOT  &kp FSLH       &kp ESC
-                                    &tog 1  &kp LEFT_SHIFT  &mt LCTRL RET                                               &mt RALT SPACE  &mt RGUI ESC  &tog 2
+                                    &mo 1   &kp LEFT_SHIFT  &mt LCTRL RET                                               &mt RALT SPACE  &mt RGUI ESC  &mo 2
             >;
         };
 
@@ -107,7 +107,7 @@ ZMK_HOLD_TAP(hmr,
 &trans  &kp PG_UP  &kp K_PREV  &kp UP    &kp K_NEXT  &kp PG_DN                    &trans          &kp PSCRN  &kp N7  &kp N8  &kp N9  &kp EQUAL  &trans
 &trans  &kp HOME   &kp LEFT    &kp DOWN  &kp RIGHT   &kp END              &trans  &trans  &trans  &kp DOT    &kp N4  &kp N5  &kp N6  &kp N0     &trans
 &trans  &trans     &trans      &trans    &trans      &trans     &trans            &trans          &kp COMMA  &kp N1  &kp N2  &kp N3  &kp MINUS  &trans
-                               &to 0     &trans      &trans                                       &trans     &trans  &trans
+                               &trans    &trans      &trans                                       &trans     &trans  &trans
             >;
 
             label = "NUM";
@@ -117,9 +117,9 @@ ZMK_HOLD_TAP(hmr,
             display-name = "SYMBOL";
             bindings = <
 &trans  &kp EXCL      &kp AT      &kp HASH    &kp DLLR   &kp PRCNT                                    &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &mkp MB5      &mkp LCLK   &mkp MCLK   &mkp RCLK  &mkp MB4                     &mmv MOVE_LEFT  &bt BT_CLR_ALL  &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+&td0    &mkp MB5      &mkp LCLK   &mkp MCLK   &mkp RCLK  &mkp MB4                     &mmv MOVE_LEFT  &bt BT_CLR_ALL  &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
 &trans  &out OUT_TOG  &bt BT_PRV  &bt BT_NXT  &trans     &ext_power EP_TOG  &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                  &trans      &trans     &trans                                                                        &trans     &trans     &to 0
+                                  &trans      &trans     &trans                                                                        &trans     &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
