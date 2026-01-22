@@ -151,8 +151,8 @@ ZMK_MOD_MORPH(bs_del, bindings = <&kp BSPC>, <&kp DEL>;
               mods = <(MOD_LSFT|MOD_RSFT)>;)
 
 // Tap: space |  Hold: nav layer.
-ZMK_HOLD_TAP(lt_spc, bindings = <&mo>, <&kp SPC>; flavor = "balanced";
-             tapping-term-ms = <200>; quick-tap-ms = <QUICK_TAP_MS>;)
+// ZMK_HOLD_TAP(lt_spc, bindings = <&mo>, <&kp SPC>; flavor = "balanced";
+            //  tapping-term-ms = <200>; quick-tap-ms = <QUICK_TAP_MS>;)
 
 /* Keymap */
 // ZMK_CONDITIONAL_LAYER(sys, FN NUM, SYS) // FN + NUM --> SYS.
@@ -181,7 +181,7 @@ ZMK_BASE_LAYER(Base,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ╭─────╮  ╰─────╮      ╭─────╯  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &kp NUBS      &kp Z         &kp X         &kp C         &kp V         &kp B       ,   &kp SPACE     &kp DOWN          &kp N         &kp M         &kp COMMA     &kp DOT       &kp  FSLH      &bs_del    ,
 //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤  ╰─────╯        ╰──────╯        ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                              &mo SYMB      MAGIC_SHIFT  &lt_spc NAV 0,                                   &lt FN RET    SMART_NUM     &kp K_CANCEL       
+                                              &mo SYMB      MAGIC_SHIFT  &lt NAV SPC  ,                                   &lt FN RET    SMART_NUM     &kp K_CANCEL   
 //                                          ╰─────────────┴─────────────┴─────────────╯                                 ╰─────────────┴─────────────┴─────────────╯
 )
 
