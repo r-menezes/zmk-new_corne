@@ -77,6 +77,9 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 // Soft off behavior
 // &soft_off { hold-time-ms = <1000>; };
 
+// Sticky shift + leader.
+ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
+
 // Combos, leader key sequences, mouse emulation
 
 #include "combos.dtsi" // Must be sourced after HRM-combo hack.
