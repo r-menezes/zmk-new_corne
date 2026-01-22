@@ -158,7 +158,7 @@ ZMK_HOLD_TAP(lt_spc, bindings = <&mo>, <&kp SPC>; flavor = "balanced";
 
 // Encoder keys
 #define _ENC_L_C_R_KEYS_                                           \
-    &kp PG_UP, &kp PSCRN, &kp PG_DN
+    &kp PG_UP &kp PSCRN &kp PG_DN
 
 ZMK_BASE_LAYER(Base,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                 ╭──────╮        ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
