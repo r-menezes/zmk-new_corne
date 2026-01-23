@@ -157,8 +157,8 @@ ZMK_MOD_MORPH(bs_del, bindings = <&kp BSPC>, <&kp DEL>;
               mods = <(MOD_LSFT|MOD_RSFT)>;)
 
 // Tap: return |  Hold: nav layer.
-#define LT_NAV_RET &lt_spc NAV 0
-ZMK_HOLD_TAP(lt_spc, bindings = <&mo>, <&kp RET>; flavor = "balanced";
+#define LT_NAV_RET &lt_ret NAV 0
+ZMK_HOLD_TAP(lt_ret, bindings = <&mo>, <&kp RET>; flavor = "balanced";
              tapping-term-ms = <200>; quick-tap-ms = <QUICK_TAP_MS>;)
 
 // Tap: space |  Hold: FN layer.
