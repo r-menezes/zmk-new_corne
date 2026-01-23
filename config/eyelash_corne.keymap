@@ -156,15 +156,15 @@ ZMK_TAP_DANCE(num_dance, bindings = <&num_word NUM>, <&sl NUM>;
 ZMK_MOD_MORPH(bs_del, bindings = <&kp BSPC>, <&kp DEL>;
               mods = <(MOD_LSFT|MOD_RSFT)>;)
 
+// BROKEN!
 // Tap: return |  Hold: nav layer.
-#define LT_NAV_RET &lt_ret NAV 0
-ZMK_HOLD_TAP(lt_ret, bindings = <&mo>, <&kp RET>; flavor = "balanced";
-             tapping-term-ms = <200>; quick-tap-ms = <QUICK_TAP_MS>;)
-
+// #define LT_NAV_RET &lt_ret NAV 0
+// ZMK_HOLD_TAP(lt_ret, bindings = <&mo>, <&kp RET>; flavor = "balanced";
+//              tapping-term-ms = <200>; quick-tap-ms = <QUICK_TAP_MS>;)
 // Tap: space |  Hold: FN layer.
-#define LT_FN_SPC &lt_spc FN 0
-ZMK_HOLD_TAP(lt_spc, bindings = <&mo>, <&kp SPC>; flavor = "balanced";
-             tapping-term-ms = <200>; quick-tap-ms = <QUICK_TAP_MS>;)
+// #define LT_FN_SPC &lt_spc FN 0
+// ZMK_HOLD_TAP(lt_spc, bindings = <&mo>, <&kp SPC>; flavor = "balanced";
+//              tapping-term-ms = <200>; quick-tap-ms = <QUICK_TAP_MS>;)
 
 /* Keymap */
 // ZMK_CONDITIONAL_LAYER(sys, FN NUM, SYS) // FN + NUM --> SYS.
@@ -196,7 +196,7 @@ ZMK_BASE_LAYER(Base,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ╭─────╮  ╰─────╮      ╭─────╯  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &kp NUBS      &kp Z         &kp X         &kp C         &kp V         &kp B       ,   &kp SPACE     &kp DOWN          &kp N         &kp M         &kp COMMA     &kp DOT       &kp  FSLH      &kp LBKT   ,
 //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤  ╰─────╯        ╰──────╯        ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                              &mo SYMB      MAGIC_SHIFT   LT_NAV_RET  ,                                   LT_FN_SPC     SMART_NUM     &kp K_CANCEL   
+                                              &mo SYMB      MAGIC_SHIFT   &lt NAV RET ,                                   &lt FN SPACE  SMART_NUM     &kp K_CANCEL   
 //                                          ╰─────────────┴─────────────┴─────────────╯                                 ╰─────────────┴─────────────┴─────────────╯
 )
 
