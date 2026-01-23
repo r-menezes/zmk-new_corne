@@ -62,5 +62,7 @@ ZMK_LEADER_SEQUENCE(boot,       &bootloader,    B O O T)
 ZMK_LEADER_SEQUENCE(off,        &soft_off,      O F F)
 
 // RGB saturation controls
-ZMK_LEADER_SEQUENCE(rgb_s_up,   &rgb_ug RGB_SAT_UP,   R G B S U P)
-ZMK_LEADER_SEQUENCE(rgb_s_dn,   &rgb_ug RGB_SAT_DN,   R G B S D N)
+ZMK_LEADER_SEQUENCE(rgb_sai,   &rgb_ug RGB_SAI,   R G B S A I)
+ZMK_LEADER_SEQUENCE(rgb_sad,   &rgb_ug RGB_SAD,   R G B S A D)
+ZMK_LEADER_SEQUENCE(rgb_spi,   &rgb_ug RGB_SPI,   R G B S P I)
+ZMK_LEADER_SEQUENCE(rgb_spd,   &rgb_ug RGB_SPD,   R G B S P D)
