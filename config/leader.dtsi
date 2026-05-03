@@ -1,0 +1,68 @@
+#undef ZMK_LEADER_SEQUENCE
+#define ZMK_LEADER_SEQUENCE(name, leader_bindings, leader_sequence) \
+    / { \
+        behaviors { \
+            leader: leader { \
+                compatible = "zmk,behavior-leader-key"; \
+                #binding-cells = <0>; \
+                ignore-keys = <LSHFT RSHFT>; \
+                leader_sequence_ ## name { \
+                    bindings = <leader_bindings>; \
+                    sequence = <leader_sequence>; \
+                }; \
+            }; \
+        }; \
+    };
+
+// /* German umlauts */
+// ZMK_LEADER_SEQUENCE(de_ae,      &uc UC_DE_AE,         A)  // ä
+// ZMK_LEADER_SEQUENCE(de_oe,      &uc UC_DE_OE,         O)  // ö
+// ZMK_LEADER_SEQUENCE(de_ue,      &uc UC_DE_UE,         U)  // ü
+// ZMK_LEADER_SEQUENCE(de_eszett,  &uc UC_DE_SS,         S)  // ß
+
+// /* Greek letters */
+// ZMK_LEADER_SEQUENCE(gk_alpha,   &uc UC_EL_ALPHA,      G A)  // α
+// ZMK_LEADER_SEQUENCE(gk_beta,    &uc UC_EL_BETA,       G B)  // β
+// ZMK_LEADER_SEQUENCE(gk_gamma,   &uc UC_EL_GAMMA,      G G)  // γ
+// ZMK_LEADER_SEQUENCE(gk_delta,   &uc UC_EL_DELTA,      G D)  // δ
+// ZMK_LEADER_SEQUENCE(gk_epsilon, &uc UC_EL_EPSILON,    G E)  // ε
+// ZMK_LEADER_SEQUENCE(gk_zeta,    &uc UC_EL_ZETA,       G Z)  // ζ
+// ZMK_LEADER_SEQUENCE(gk_eta,     &uc UC_EL_ETA,        G H)  // η
+// ZMK_LEADER_SEQUENCE(gk_theta,   &uc UC_EL_THETA,      G V)  // θ
+// ZMK_LEADER_SEQUENCE(gk_iota,    &uc UC_EL_IOTA,       G I)  // ι
+// ZMK_LEADER_SEQUENCE(gk_kappa,   &uc UC_EL_KAPPA,      G K)  // κ
+// ZMK_LEADER_SEQUENCE(gk_lambda,  &uc UC_EL_LAMBDA,     G L)  // λ
+// ZMK_LEADER_SEQUENCE(gk_mu,      &uc UC_EL_MU,         G M)  // μ
+// ZMK_LEADER_SEQUENCE(gk_nu,      &uc UC_EL_NU,         G N)  // ν
+// ZMK_LEADER_SEQUENCE(gk_xi,      &uc UC_EL_XI,         G X)  // ξ
+// ZMK_LEADER_SEQUENCE(gk_omikron, &uc UC_EL_OMIKRON,    G O)  // ο
+// ZMK_LEADER_SEQUENCE(gk_pi,      &uc UC_EL_PI,         G P)  // π
+// ZMK_LEADER_SEQUENCE(gk_rho,     &uc UC_EL_RHO,        G R)  // ρ
+// ZMK_LEADER_SEQUENCE(gk_sigma,   &uc UC_EL_SIGMA,      G S)  // σ
+// ZMK_LEADER_SEQUENCE(gk_tau,     &uc UC_EL_TAU,        G T)  // τ
+// ZMK_LEADER_SEQUENCE(gk_upsilon, &uc UC_EL_UPSILON,    G U)  // υ
+// ZMK_LEADER_SEQUENCE(gk_phi,     &uc UC_EL_PHI,        G F)  // ϕ
+// ZMK_LEADER_SEQUENCE(gk_chi,     &uc UC_EL_CHI,        G C)  // χ
+// ZMK_LEADER_SEQUENCE(gk_psi,     &uc UC_EL_PSI,        G Y)  // ψ
+// ZMK_LEADER_SEQUENCE(gk_omega,   &uc UC_EL_OMEGA,      G W)  // ω
+
+// BLE and USB
+ZMK_LEADER_SEQUENCE(usb,        &out OUT_USB,    U S B)
+ZMK_LEADER_SEQUENCE(ble,        &out OUT_BLE,    B L E)
+ZMK_LEADER_SEQUENCE(bl_clear,   &bt BT_CLR,      B L C L R)
+ZMK_LEADER_SEQUENCE(bl_0,       &bt BT_SEL 0,    B L 1)
+ZMK_LEADER_SEQUENCE(bl_1,       &bt BT_SEL 1,    B L 2)
+ZMK_LEADER_SEQUENCE(bl_2,       &bt BT_SEL 2,    B L 3)
+ZMK_LEADER_SEQUENCE(bl_3,       &bt BT_SEL 3,    B L 4)
+ZMK_LEADER_SEQUENCE(bl_4,       &bt BT_SEL 4,    B L 5)
+
+// System commands
+ZMK_LEADER_SEQUENCE(reset,      &sys_reset,     R E S E T)
+ZMK_LEADER_SEQUENCE(boot,       &bootloader,    B O O T)
+ZMK_LEADER_SEQUENCE(off,        &soft_off,      O F F)
+
+// RGB saturation controls
+ZMK_LEADER_SEQUENCE(rgb_sai,   &rgb_ug RGB_SAI,   R G B S A I)
+ZMK_LEADER_SEQUENCE(rgb_sad,   &rgb_ug RGB_SAD,   R G B S A D)
+ZMK_LEADER_SEQUENCE(rgb_spi,   &rgb_ug RGB_SPI,   R G B S P I)
+ZMK_LEADER_SEQUENCE(rgb_spd,   &rgb_ug RGB_SPD,   R G B S P D)

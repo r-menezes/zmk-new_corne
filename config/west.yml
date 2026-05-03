@@ -2,17 +2,34 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-      # Additional modules containing boards/shields/custom code can be listed here as well.
-      # See:
-      # - https://zmk.dev/docs/features/modules
-      # - https://docs.zephyrproject.org/3.5.0/develop/west/manifest.html#projects
+    - name: dsifry # BONGO CAT
+      url-base: https://github.com/dsifry
+    - name: urob # HOME-ROW MODS AND SEVERAL QOL IMPROVEMENTS
+      url-base: https://github.com/urob
+    - name: a741725193 # EYELASH CORNE
+      url-base: https://github.com/a741725193
   projects:
     - name: eyelash_corne
       url: https://github.com/a741725193/zmk-new_corne
       revision: main
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3.0
+      revision: v0.3
       import: app/west.yml
+    - name: zmk-helpers # ZMK HELPERS
+      remote: urob
+      revision: v0.3 # Should match ZMK release.
+    - name: zmk-leader-key # LEADER KEY FUNCTIONALITY
+      remote: urob
+      revision: v0.3 # Should match ZMK release.
+    - name: zmk-auto-layer
+      remote: urob
+      revision: v0.3 # Should match ZMK release.
+    - name: zmk-unicode
+      remote: urob
+      revision: v0.3 # Should match ZMK release.
+    - name: nice-view-mod # BONGO CAT
+      remote: dsifry
+      revision: main
   self:
     path: config
