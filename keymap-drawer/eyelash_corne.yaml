@@ -43,8 +43,8 @@ layers:
   - .
   - /
   - '['
-  - Symbol
   - {t: '&caps_word', h: LSHFT}
+  - Symbol
   - {t: RET, h: Nav}
   - {t: SPACE, h: Fn}
   - {t: '&num_dance', h: Num}
@@ -54,7 +54,7 @@ layers:
   - Alt+F4
   - {t: ▽, type: trans}
   - Sft+TAB
-  - {t: ▽, type: trans}
+  - Alt+TAB
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -90,7 +90,7 @@ layers:
   - TAB
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - APP
   - '&msc SCRL_DOWN'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -219,28 +219,28 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '-'
+  - _
+  - <
+  - '>'
   - '['
   - ']'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - +
+  - '-'
+  - '*'
+  - /
+  - '='
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - \
   - '|'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - /
+  - '?'
   - '{'
   - '}'
-  - {type: held}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -293,4 +293,28 @@ combos:
   l: [Base, Nav, Num]
 - p: [26, 27]
   k: ']'
+  l: [Base, Nav, Num]
+- p: [2, 15]
+  k: '@'
+  l: [Base, Nav, Num]
+- p: [3, 16]
+  k: '#'
+  l: [Base, Nav, Num]
+- p: [4, 17]
+  k: $
+  l: [Base, Nav, Num]
+- p: [5, 18]
+  k: '%'
+  l: [Base, Nav, Num]
+- p: [7, 22]
+  k: ^
+  l: [Base, Nav, Num]
+- p: [8, 23]
+  k: '&'
+  l: [Base, Nav, Num]
+- p: [9, 24]
+  k: '*'
+  l: [Base, Nav, Num]
+- p: [10, 25]
+  k: '&'
   l: [Base, Nav, Num]
