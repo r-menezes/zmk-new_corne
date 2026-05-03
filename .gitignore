@@ -7,3 +7,13 @@ firmware.zip
 *.uf2
 .vscode/
 CLAUDE.md
+zephyr/
+modules/
+tools/
+bootloader/
+.build/
+.direnv/
+flake.lock
+flake.nix
+nix/
+Justfile
