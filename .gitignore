@@ -5,3 +5,5 @@ tools/
 .west/
 firmware.zip
 *.uf2
+.vscode/
+CLAUDE.md
