@@ -556,3 +556,11 @@ parse_config:
       key:
         shifted: ":"
         hold: ";"
+parse_config:
+  zmk_additional_includes:
+    - zmk-helpers/include
+    - zephyr/modules/zmk-helpers/include
+    - modules/zmk-helpers/include
+    - config/zmk-helpers/include
+    - zmk/modules/zmk-helpers/include
+
