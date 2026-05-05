@@ -4,14 +4,14 @@ layers:
   - $$mdi:keyboard-tab$$
   - Q
   - W
-  - E
+  - '&ak_e'
   - R
   - T
   - $$mdi:arrow-up-bold$$
   - Y
-  - U
-  - I
-  - O
+  - '&ak_u'
+  - '&ak_i'
+  - '&ak_o'
   - P
   - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
   - $$mdi:keyboard-esc$$
@@ -28,11 +28,11 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
   - {t: ;, h: LGUI, s: ':'}
-  - {t: '''', s: '"'}
+  - {t: '~', s: ^}
   - NUBS
   - Z
   - X
-  - C
+  - '&ak_c'
   - V
   - B
   - $$mdi:keyboard-space$$
@@ -41,8 +41,8 @@ layers:
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
-  - {t: /, s: '?'}
-  - {t: '[', s: '{'}
+  - {t: \, s: '?'}
+  - {t: '`', s: .}
   - {t: '$$mdi:alpha-w-box$$', h: '$$mdi:apple-keyboard-shift$$'}
   - Symbol
   - {t: '$$mdi:keyboard-return$$', h: Nav}
@@ -53,14 +53,14 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - Alt+F4
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:keyboard-tab-reverse$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - Alt+$$mdi:keyboard-tab$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - HOME
   - PG DN
   - PG UP
-  - {t: '$$mdi:transfer$$', type: trans}
+  - END
   - {t: '$$mdi:backspace-reverse-outline$$', h: 'Ctl+$$mdi:backspace-reverse-outline$$'}
   - {t: '$$mdi:backspace$$', h: 'Ctl+$$mdi:backspace$$'}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -77,7 +77,7 @@ layers:
   - {t: '$$mdi:arrow-up-bold$$', h: Ctl+HOME}
   - {t: '$$mdi:arrow-right-bold$$', h: END}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - $$mdi:pan-up$$
+  - '&msc MOVE_Y(16)'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -91,7 +91,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - APP
-  - $$mdi:pan-down$$
+  - '&msc MOVE_Y(-16)'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
@@ -141,7 +141,7 @@ layers:
   - F3
   - F11
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:apple-keyboard-caps$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
@@ -251,12 +251,6 @@ combos:
   l: [Base, Nav, Num]
 - p: [33, 28]
   k: '&soft_off'
-  l: [Base, Nav, Num]
-- p: [16, 17]
-  k: {t: '&leader', h: 'Sft+$$mdi:apple-keyboard-control$$'}
-  l: [Base, Nav, Num]
-- p: [15, 16, 17]
-  k: {t: '&leader_sft', h: '$$mdi:star-three-points$$'}
   l: [Base, Nav, Num]
 - p: [0, 1]
   k: {t: '1', s: '!'}

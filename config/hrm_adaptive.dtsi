@@ -1,0 +1,51 @@
+/ {
+    behaviors {
+        hml_ak_a: hml_ak_a {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <1>;
+            bindings = <&kp>, <&ak_a>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+        };
+
+        hmr_ak_u: hmr_ak_u {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <1>;
+            bindings = <&kp>, <&ak_u>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+        };
+
+        hmr_ak_o: hmr_ak_o {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <1>;
+            bindings = <&kp>, <&ak_o>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+        };
+
+        hmr_ak_c: hmr_ak_c {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <1>;
+            bindings = <&kp>, <&ak_c>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+        };
+    };
+};

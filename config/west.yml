@@ -28,6 +28,9 @@ manifest:
     - name: zmk-unicode
       remote: urob
       revision: v0.3 # Should match ZMK release.
+    - name: zmk-adaptive-key
+      remote: urob
+      revision: v0.3 # Should match ZMK release.
     - name: nice-view-mod # BONGO CAT
       remote: dsifry
       revision: main

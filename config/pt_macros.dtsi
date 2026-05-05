@@ -1,0 +1,48 @@
+ZMK_MACRO(mac_cedilla, bindings = <&kp BSPC>, <&pt_c_cedilla>;)
+ZMK_MACRO(mac_a_grave, bindings = <&kp BSPC>, <&pt_a_grave>;)
+ZMK_MACRO(mac_a_acute, bindings = <&kp BSPC>, <&pt_aa>;)
+ZMK_MACRO(mac_a_circumflex, bindings = <&kp BSPC>, <&pt_a_circumflex>;)
+ZMK_MACRO(mac_a_tilde, bindings = <&kp BSPC>, <&pt_a_tilde>;)
+ZMK_MACRO(mac_e_grave, bindings = <&kp BSPC>, <&pt_e_grave>;)
+ZMK_MACRO(mac_e_acute, bindings = <&kp BSPC>, <&pt_e_acute>;)
+ZMK_MACRO(mac_e_circumflex, bindings = <&kp BSPC>, <&pt_e_circumflex>;)
+ZMK_MACRO(mac_i_acute, bindings = <&kp BSPC>, <&pt_i_acute>;)
+ZMK_MACRO(mac_o_acute, bindings = <&kp BSPC>, <&pt_oa>;)
+ZMK_MACRO(mac_o_circumflex, bindings = <&kp BSPC>, <&pt_o_circumflex>;)
+ZMK_MACRO(mac_o_tilde, bindings = <&kp BSPC>, <&pt_o_tilde>;)
+ZMK_MACRO(mac_u_grave, bindings = <&kp BSPC>, <&pt_u_grave>;)
+ZMK_MACRO(mac_u_acute, bindings = <&kp BSPC>, <&pt_u_acute>;)
+ZMK_MACRO(mac_u_circumflex, bindings = <&kp BSPC>, <&pt_u_circumflex>;)
+
+ZMK_ADAPTIVE_KEY(ak_a, bindings = <&kp A>; dead-keys = <GRAVE APOS CARET TILDE>;
+    grave { trigger-keys = <GRAVE>; bindings = <&mac_a_grave>; };
+    acute { trigger-keys = <APOS>; bindings = <&mac_a_acute>; };
+    circumflex { trigger-keys = <CARET>; bindings = <&mac_a_circumflex>; };
+    tilde { trigger-keys = <TILDE>; bindings = <&mac_a_tilde>; };
+)
+
+ZMK_ADAPTIVE_KEY(ak_e, bindings = <&kp E>; dead-keys = <GRAVE APOS CARET>;
+    grave { trigger-keys = <GRAVE>; bindings = <&mac_e_grave>; };
+    acute { trigger-keys = <APOS>; bindings = <&mac_e_acute>; };
+    circumflex { trigger-keys = <CARET>; bindings = <&mac_e_circumflex>; };
+)
+
+ZMK_ADAPTIVE_KEY(ak_i, bindings = <&kp I>; dead-keys = <APOS>;
+    acute { trigger-keys = <APOS>; bindings = <&mac_i_acute>; };
+)
+
+ZMK_ADAPTIVE_KEY(ak_o, bindings = <&kp O>; dead-keys = <APOS CARET TILDE>;
+    acute { trigger-keys = <APOS>; bindings = <&mac_o_acute>; };
+    circumflex { trigger-keys = <CARET>; bindings = <&mac_o_circumflex>; };
+    tilde { trigger-keys = <TILDE>; bindings = <&mac_o_tilde>; };
+)
+
+ZMK_ADAPTIVE_KEY(ak_u, bindings = <&kp U>; dead-keys = <GRAVE APOS CARET>;
+    grave { trigger-keys = <GRAVE>; bindings = <&mac_u_grave>; };
+    acute { trigger-keys = <APOS>; bindings = <&mac_u_acute>; };
+    circumflex { trigger-keys = <CARET>; bindings = <&mac_u_circumflex>; };
+)
+
+ZMK_ADAPTIVE_KEY(ak_c, bindings = <&kp C>; dead-keys = <SEMI>;
+    cedilla { trigger-keys = <SEMI>; bindings = <&mac_cedilla>; };
+)
