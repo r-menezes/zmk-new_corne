@@ -4,14 +4,14 @@ layers:
   - $$mdi:keyboard-tab$$
   - Q
   - W
-  - '&ak_e'
+  - E
   - R
   - T
   - $$mdi:arrow-up-bold$$
   - Y
-  - '&ak_u'
-  - '&ak_i'
-  - '&ak_o'
+  - U
+  - I
+  - O
   - P
   - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
   - $$mdi:keyboard-esc$$
@@ -28,11 +28,11 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
   - {t: ;, h: LGUI, s: ':'}
-  - {t: '~', s: ^}
+  - {t: '[', s: '{'}
   - NUBS
   - Z
   - X
-  - '&ak_c'
+  - C
   - V
   - B
   - $$mdi:keyboard-space$$
@@ -42,16 +42,16 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: \, s: '?'}
-  - {t: '`', s: .}
+  - {t: ']', s: '}'}
   - {t: '$$mdi:alpha-w-box$$', h: '$$mdi:apple-keyboard-shift$$'}
   - Symbol
   - {t: '$$mdi:keyboard-return$$', h: Nav}
   - {t: '$$mdi:keyboard-space$$', h: Fn}
   - {t: '&num_dance', h: Num}
-  - $$mdi:close-box$$
+  - '5'
   Nav:
   - {t: '$$mdi:transfer$$', type: trans}
-  - Alt+F4
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Alt+$$mdi:keyboard-tab$$
@@ -245,6 +245,55 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  '5':
+  - {t: '$$mdi:transfer$$', type: trans}
+  - á
+  - {t: '$$mdi:transfer$$', type: trans}
+  - é
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - ú
+  - í
+  - ó
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: ã, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: ê, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: ô, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - à
+  - â
+  - {t: '$$mdi:transfer$$', type: trans}
+  - ç
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - õ
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
 combos:
 - p: [36, 41]
   k: '&soft_off'

@@ -25,6 +25,7 @@
 #define FN 2
 #define NUM 3
 #define SYMB 4
+#define BR 5
 
 // better readability
 #define XXX &none
@@ -64,7 +65,7 @@
 
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS) // Left-hand HRMs.
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
-MAKE_HRM(hml_ak_a, &kp, &ak_a, KEYS_R THUMBS) // Left-hand HRMs for ak_a
+// MAKE_HRM(hml_ak_a, &kp, &ak_a, KEYS_R THUMBS) // Left-hand HRMs for ak_a
 
 // Hack: Make HRM combos tap-only (cf, ZMK issue #544).
 #define ZMK_COMBO_8(NAME, TAP, POS, LAYERS, COMBO_MS, IDLE_MS, HOLD, SIDE)     \
@@ -165,7 +166,20 @@ ZMK_MOD_MORPH(tilde_caret, bindings = <&kp TILDE>, <&kp CARET>; mods = <(MOD_LSF
 ZMK_MOD_MORPH(grave_acute, bindings = <&kp GRAVE>, <&kp APOS>; mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(bslh_qmark, bindings = <&kp BSLH>, <&kp QMARK>; mods = <(MOD_LSFT|MOD_RSFT)>;)
 
-#include "pt_macros.dtsi"
+// #include "pt_macros.dtsi"
+
+// One-param macro wrappers for pt_* unicode behaviors so they can be used as
+// the tap side of a hold-tap (which requires #binding-cells = <2> total).
+// The passed param is ignored; the macro simply fires the unicode behavior.
+ZMK_MACRO_ONE_PARAM(m_pt_a_tilde,      bindings = <&pt_a_tilde>;)
+ZMK_MACRO_ONE_PARAM(m_pt_e_circumflex, bindings = <&pt_e_circumflex>;)
+ZMK_MACRO_ONE_PARAM(m_pt_o_circumflex, bindings = <&pt_o_circumflex>;)
+
+// Hold-tap wrappers for the BR layer using the macro wrappers above.
+// Usage: &hml_pt_a_tilde LGUI 0  (0 is the ignored tap param)
+MAKE_HRM(hml_pt_a_tilde,      &kp, &m_pt_a_tilde,      KEYS_R THUMBS)
+MAKE_HRM(hml_pt_e_circumflex, &kp, &m_pt_e_circumflex, KEYS_R THUMBS)
+MAKE_HRM(hmr_pt_o_circumflex, &kp, &m_pt_o_circumflex, KEYS_L THUMBS)
 
 // BROKEN!
 // Tap: return |  Hold: nav layer.
@@ -200,19 +214,19 @@ ZMK_MOD_MORPH(bslh_qmark, bindings = <&kp BSLH>, <&kp QMARK>; mods = <(MOD_LSFT|
 
 ZMK_BASE_LAYER(Base,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                 ╭──────╮        ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    &kp TAB       &kp Q         &kp W         &ak_e         &kp R         &kp T       ,                  &kp UP           &kp Y         &ak_u         &ak_i         &ak_o         &kp P          &bs_del    ,
+    &kp TAB       &kp Q         &kp W         &kp E         &kp R         &kp T       ,                  &kp UP           &kp Y         &kp U         &kp I         &kp O         &kp P          &bs_del    ,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ╭─────╯      ╰─────╮  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &kp ESC       &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G       ,             _ENC_L_C_R_KEYS_      &kp H         &hmr LCTRL J  &hmr LSHFT K  &hmr LALT L   &hmr LGUI SEMI &tilde_caret ,
+    &kp ESC       &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G       ,             _ENC_L_C_R_KEYS_      &kp H         &hmr LCTRL J  &hmr LSHFT K  &hmr LALT L   &hmr LGUI SEMI &kp LBKT   ,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ╭─────╮  ╰─────╮      ╭─────╯  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &kp NUBS      &kp Z         &kp X         &ak_c         &kp V         &kp B       ,   &kp SPACE     &kp DOWN          &kp N         &kp M         &kp COMMA     &kp DOT       &bslh_qmark    &grave_acute ,
+    &kp NUBS      &kp Z         &kp X         &kp C         &kp V         &kp B       ,   &kp SPACE     &kp DOWN          &kp N         &kp M         &kp COMMA     &kp DOT       &bslh_qmark    &kp RBKT   ,
 //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤  ╰─────╯        ╰──────╯        ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                              MAGIC_SHIFT   &mo SYMB     &lt NAV RET ,                                    &lt FN SPACE  SMART_NUM     &kp K_CANCEL
+                                              MAGIC_SHIFT   &mo SYMB     &lt NAV RET ,                                    &lt FN SPACE  SMART_NUM     &mo BR       
 //                                          ╰─────────────┴─────────────┴─────────────╯                                 ╰─────────────┴─────────────┴─────────────╯
 )
 
 ZMK_BASE_LAYER(Nav,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                ╭─────╮      ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    ___           &kp LA(F4)    ___           ___           &kp LA(TAB)   ___         ,                  ___          &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       NAV_DEL       NAV_BSPC    ,
+    ___           ___           ___           ___           &kp LA(TAB)   ___         ,                  ___          &kp HOME      &kp PG_DN     &kp PG_UP     &kp END       NAV_DEL       NAV_BSPC    ,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ╭────╯     ╰────╮ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     ___           &sk LGUI      &sk LALT      &sk LSHFT     &sk LCTRL     ___         ,             ___  ___  ___     NAV_LEFT      NAV_DOWN      NAV_UP        NAV_RIGHT     &kp RET       SCRLUP      ,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ╭─────╮  ╰────╮     ╭────╯ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
@@ -253,6 +267,18 @@ ZMK_BASE_LAYER(Symbol,
     &kp DQT       ___           ___           ___           ___           ___         ,             ___  ___  ___     &kp MINUS     &kp UNDER     &kp LT        &kp GT        &kp LBKT      &kp RBKT    ,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ╭─────╮  ╰────╮     ╭────╯ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     ___           &kp PLUS      &kp MINUS     &kp STAR      &kp SLASH     &kp EQUAL   ,    ___           ___          &kp BSLH      &kp PIPE      &kp FSLH      &kp QMARK     &kp LBRC      &kp RBRC    ,
+//╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤  ╰─────╯       ╰─────╯      ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+                                              ___           ___           ___         ,                               ___           ___           ___          
+//                                          ╰─────────────┴─────────────┴─────────────╯                             ╰─────────────┴─────────────┴─────────────╯
+)
+
+ZMK_BASE_LAYER(BR,
+//╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                ╭─────╮      ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+    ___           &pt_aa        ___           &pt_e_acute   ___           ___         ,                  ___         ___            &pt_u_acute   &pt_i_acute   &pt_oa        ___           ___         ,
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ╭────╯     ╰────╮ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    ___           &hml_pt_a_tilde LGUI 0  ___   &hml_pt_e_circumflex LSHFT 0  ___  ___   ,             ___  ___  ___     ___           ___           ___           &hmr_pt_o_circumflex LALT 0  ___  ___    ,
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ╭─────╮  ╰────╮     ╭────╯ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    &pt_a_grave   &pt_a_circumflex  ___       &pt_c_cedilla  ___          ___         ,    ___           ___          ___           ___           ___           &pt_o_tilde   ___           ___         ,
 //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤  ╰─────╯       ╰─────╯      ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                               ___           ___           ___         ,                               ___           ___           ___          
 //                                          ╰─────────────┴─────────────┴─────────────╯                             ╰─────────────┴─────────────┴─────────────╯

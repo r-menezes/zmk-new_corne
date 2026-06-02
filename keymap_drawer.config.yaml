@@ -123,6 +123,38 @@ parse_config:
     type: trans
 
   raw_binding_map:
+    # Portuguese HRM hold-taps (tap is a unicode behavior, hold is a modifier)
+    "&hml_pt_a_tilde LGUI 0":
+      tap: "ã"
+      hold: $$mdi:apple-keyboard-command$$
+    "&hml_pt_e_circumflex LSHFT 0":
+      tap: "ê"
+      hold: $$mdi:apple-keyboard-shift$$
+    "&hmr_pt_o_circumflex LALT 0":
+      tap: "ô"
+      hold: $$mdi:apple-keyboard-option$$
+    "&pt_aa":
+      tap: "á"
+    "&pt_a_circumflex":
+      tap: "â"
+    "&pt_a_grave":
+      tap: "à"
+    "&pt_e_acute":
+      tap: "é"
+    "&pt_e_circumflex":
+      tap: "ê"
+    "&pt_i_acute":
+      tap: "í"
+    "&pt_o_circumflex":
+      tap: "ô"
+    "&pt_o_tilde":
+      tap: "õ"
+    "&pt_oa":
+      tap: "ó"
+    "&pt_u_acute":
+      tap: "ú"
+    "&pt_c_cedilla":
+      tap: "ç"
     # Layers
     "&ltq 1 BACKSPACE":
       tap:  $$mdi:backspace$$
